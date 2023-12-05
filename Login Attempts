@@ -1,0 +1,48 @@
+#This code shows how to create log in attempts.
+
+#This is to create a simple User.
+class User():
+
+#This is to initialize the User
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+
+#This is to display the User's information
+    def describe_user(self):
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+#This is to show a greeting for the User
+    def greet_user(self):
+        print("\nWelcome back, " + self.username + "!")
+
+#This shows the log in attempts.
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+#This is to reset the login attempts to 0
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+
+#This is for user data
+brandon = User('brandon', 'serrano', 'b_serrano', 'b_serrano@example.com', 'Texas')
+brandon.describe_user()
+brandon.greet_user()
+
+print("\nMaking 3 login attempts...")
+brandon.increment_login_attempts()
+brandon.increment_login_attempts()
+brandon.increment_login_attempts()
+print("  Login attempts: " + str(brandon.login_attempts))
+
+print("Resetting login attempts...")
+eric.reset_login_attempts()
+print("  Login attempts: " + str(brandon.login_attempts))
