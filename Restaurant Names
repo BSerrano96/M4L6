@@ -1,0 +1,24 @@
+#This is how you make and name a Restaurant while also displaying a message.
+
+#First define the class representing a restaurant.
+class Restaurant():
+    
+#Creating the Restaurant environment
+    def __init__(self, name, cuisine_type):
+        self.name = name.title()
+        self.cuisine_type = cuisine_type
+#Describe the restaurant
+    def describe_restaurant(self):
+        msg = self.name + " serves wonderful " + self.cuisine_type + "."
+        print("\n" + msg)
+#Display a message about the restaurant
+    def open_restaurant(self):
+        msg = self.name + " is open. Come on in!"
+        print("\n" + msg)
+
+restaurant = Restaurant('Justins', 'Burger Shop')
+print(restaurant.name)
+print(restaurant.cuisine_type)
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
